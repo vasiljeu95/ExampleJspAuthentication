@@ -5,7 +5,7 @@
     <title>Start Page</title>
 </head>
 <body>
-    <a href="sign-up">Sign up</a>
+    <a href="sign-up">Sign up</a><br>
     <a href="sign-in">Sign in</a>
 </body>
 </html>
