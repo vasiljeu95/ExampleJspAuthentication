@@ -19,7 +19,6 @@
         <input type="submit" value="Sign in">
     </form>
     <p>${requestScope.Message}</p>
-    <a href="change">Forgot password</a><br>
     <a href="/ExampleJspAuthentication_war_exploded/">Go back to the start page</a>
 </body>
 </html>
