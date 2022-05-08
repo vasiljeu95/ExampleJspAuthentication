@@ -20,6 +20,7 @@
         <input type="password" id="password" name="password" placeholder="Enter your password">
         <input type="submit" value="Sign up">
     </form>
-    <p>${requestScope.Message}</p>
+    <p>${requestScope.Message}</p><br>
+    <a href="/ExampleJspAuthentication_war_exploded/">Go back to the start page</a>
 </body>
 </html>

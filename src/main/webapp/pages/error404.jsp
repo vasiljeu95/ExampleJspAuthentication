@@ -12,7 +12,7 @@
 </head>
 <body>
     <h2>Bad gateway</h2>
-    <p>You're trying to get URI which does not exist</p>
-    <a href="./">Return to the main page</a>
+    <p>You're trying to get URI which does not exist</p><br>
+    <a href="/ExampleJspAuthentication_war_exploded/">Go back to the start page</a>
 </body>
 </html>
