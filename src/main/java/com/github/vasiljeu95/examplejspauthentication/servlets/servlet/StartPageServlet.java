@@ -1,13 +1,11 @@
 package com.github.vasiljeu95.examplejspauthentication.servlets.servlet;
 
-import com.github.vasiljeu95.examplejspauthentication.dao.ServiceDao;
 import com.github.vasiljeu95.examplejspauthentication.model.UserRole;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static java.util.Objects.nonNull;
 

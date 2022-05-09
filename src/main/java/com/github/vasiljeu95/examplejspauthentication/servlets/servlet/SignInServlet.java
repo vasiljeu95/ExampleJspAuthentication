@@ -1,6 +1,6 @@
 package com.github.vasiljeu95.examplejspauthentication.servlets.servlet;
 
-import com.github.vasiljeu95.examplejspauthentication.dao.ServiceDao;
+import com.github.vasiljeu95.examplejspauthentication.dao.UserServiceDao;
 import com.github.vasiljeu95.examplejspauthentication.model.UserRole;
 
 import javax.servlet.*;
@@ -33,11 +33,11 @@ public class SignInServlet extends HttpServlet {
         final String password = req.getParameter("password");
 
         @SuppressWarnings("unchecked")
-        final AtomicReference<ServiceDao> dao = (AtomicReference<ServiceDao>) req.getServletContext().getAttribute("dao");
+        final AtomicReference<UserServiceDao> dao = (AtomicReference<UserServiceDao>) req.getServletContext().getAttribute("dao");
         final HttpSession session = req.getSession();
 
         if (dao.get().userIsExist(login, password)) {
-            final UserRole userRole = dao.get().getRoleByLoginPassword(login, password);
+            final UserRole userRole = dao.get().getUserRoleByLoginPassword(login, password);
 
             req.getSession().setAttribute("password", password);
             req.getSession().setAttribute("login", login);
@@ -51,7 +51,6 @@ public class SignInServlet extends HttpServlet {
 
     private void moveToMenu(final HttpServletRequest req, final HttpServletResponse resp, final UserRole userRole) throws ServletException, IOException {
         if (userRole.equals(UserRole.ADMIN_ROLE) || userRole.equals(UserRole.USER_ROLE)) {
-//            req.getRequestDispatcher("/pages/homePage.jsp").forward(req, resp);
             resp.sendRedirect(getServletContext().getContextPath()+"/pages/homePage.jsp");
         } else {
             req.getRequestDispatcher("/pages/authentication.jsp").forward(req, resp);

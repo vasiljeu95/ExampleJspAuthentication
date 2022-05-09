@@ -1,7 +1,8 @@
 package com.github.vasiljeu95.examplejspauthentication.model;
 
 public class User {
-    private int id;
+    private static Long counter = 0L;
+    private Long id;
     private String login;
     private String password;
     private UserRole userRole;
@@ -9,18 +10,19 @@ public class User {
     public User() {
     }
 
-    public User(int id, String login, String password, UserRole userRole) {
-        this.id = id;
+    public User(String login, String password, UserRole userRole) {
+        counter++;
+        this.id = counter;
         this.login = login;
         this.password = password;
         this.userRole = userRole;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

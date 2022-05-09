@@ -13,9 +13,7 @@
 <body>
     <form method="post" action="sign-up">
         <label for="login">Login</label>
-        <input type="text" id="login" name="login" placeholder="Enter your login">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <input type="text" id="login" name="login" placeholder="Enter your login name">
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password">
         <input type="submit" value="Sign up">
